@@ -9,12 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var instruments: [String] = ["Guitar", "Violin", "Base" , "Flute" , "Drums" , "Trumbone", "Cello" , "Piano", "Tambourine", "Maracas", "Bagpipes", "Harmonica", "Harp", "Banjo", "Accordian", "Trumpet", "Tuba", "Triangle", "Clarinet", "Piccolo"]
+    @IBAction func Randomize(_ sender: Any) {
+        RandomRecommendation()
+    }
+   @IBOutlet var RecommendationLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        RandomRecommendation()
     }
-
+    func RandomRecommendation() {
+        let randominstruments = instruments.randomElement()
+        self.RecommendationLabel.text = randominstruments
+    }
 
 }
 
