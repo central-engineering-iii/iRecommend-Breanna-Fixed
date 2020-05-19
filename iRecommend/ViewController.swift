@@ -17,12 +17,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        RandomRecommendation()
+        //RandomRecommendation()
     }
     func RandomRecommendation() {
         let randominstruments = instruments.randomElement()
-        self.RecommendationLabel.text = randominstruments
-    }
-
+       // if let label = RecommendationLabel{
+RecommendationLabel.text = randominstruments
+   // }
+        print(randominstruments)
 }
-
+}
